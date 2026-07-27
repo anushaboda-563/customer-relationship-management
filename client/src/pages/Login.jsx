@@ -22,15 +22,22 @@ function Login() {
       localStorage.setItem("user", JSON.stringify(data.user));
 
       alert("Login Successful");
-
       navigate("/dashboard");
     } catch (error) {
-      console.log(error);
+      console.error(error);
 
       if (error.response) {
-        alert(error.response.data.message);
-      } else {
+        console.log("Backend Response:", error.response.data);
+
+        alert(
+          error.response.data.message ||
+            error.response.data.error ||
+            "Login failed"
+        );
+      } else if (error.request) {
         alert("Cannot connect to backend");
+      } else {
+        alert("Something went wrong");
       }
     }
   };
@@ -40,12 +47,15 @@ function Login() {
       className="container-fluid d-flex justify-content-center align-items-center"
       style={{
         minHeight: "100vh",
-        background: "linear-gradient(to right, #4facfe, #00f2fe)"
+        background: "linear-gradient(to right, #4facfe, #00f2fe)",
       }}
     >
       <div
         className="card shadow-lg p-4"
-        style={{ width: "420px", borderRadius: "15px" }}
+        style={{
+          width: "420px",
+          borderRadius: "15px",
+        }}
       >
         <div className="text-center mb-4">
           <h2 className="fw-bold text-primary">
@@ -57,6 +67,7 @@ function Login() {
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
             <label className="form-label fw-bold">Email</label>
+
             <input
               type="email"
               className="form-control"
@@ -96,7 +107,10 @@ function Login() {
 
           <div className="d-flex justify-content-between mb-3">
             <div>
-              <input type="checkbox" /> Remember Me
+              <input type="checkbox" className="form-check-input me-2" />
+              <label className="form-check-label">
+                Remember Me
+              </label>
             </div>
 
             <Link to="/forgot-password">
@@ -115,9 +129,7 @@ function Login() {
         <hr />
 
         <div className="text-center">
-          <p className="mb-2">
-            New User?
-          </p>
+          <p className="mb-2">New User?</p>
 
           <Link
             to="/register"

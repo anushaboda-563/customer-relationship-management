@@ -199,13 +199,14 @@ function Documents() {
                                             <td>
 
                                                 <a
-                                                    href={`http://localhost:5000/${document.filePath}`}
-                                                    target="_blank"
-                                                    rel="noreferrer"
-                                                    className="btn btn-success btn-sm"
-                                                >
-                                                    View File
-                                                </a>
+  href={`https://customer-relationship-management-tzoy.onrender.com/${document.filePath}`}
+  target="_blank"
+  rel="noreferrer"
+  className="btn btn-success btn-sm"
+>
+  View File
+</a>
+                 
 
                                             </td>
 
