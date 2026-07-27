@@ -1,0 +1,113 @@
+/* ==========================
+   Login Page
+========================== */
+
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#2563EB;
+}
+
+/* Container */
+
+.login-container{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Card */
+
+.login-card{
+    width:420px;
+    background:#ffffff;
+    padding:35px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+
+.login-title{
+    text-align:center;
+    color:#2563EB;
+    margin-bottom:10px;
+    font-weight:bold;
+}
+
+.login-subtitle{
+    text-align:center;
+    color:#6c757d;
+    margin-bottom:25px;
+}
+
+/* Labels */
+
+.form-label{
+    font-weight:600;
+    color:#333;
+}
+
+/* Inputs */
+
+.login-input{
+    border-radius:8px !important;
+    border:1px solid #ced4da !important;
+}
+
+/* Focus Effect */
+
+.login-input:focus{
+    border-color:#2563EB !important;
+    box-shadow:0 0 5px rgba(37,99,235,0.3) !important;
+}
+
+/* Login Button */
+
+.login-btn{
+    background:#2563EB !important;
+    border:none !important;
+    border-radius:8px !important;
+    font-weight:600;
+}
+
+.login-btn:hover{
+    background:#2563EB !important;
+}
+
+/* Register Button */
+
+.register-btn{
+    border-radius:8px !important;
+    font-weight:600;
+}
+
+.register-btn:hover{
+    background:#198754 !important;
+}
+
+/* Forgot Password */
+
+.forgot-link{
+    color:#2563EB;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.forgot-link:hover{
+    text-decoration:underline;
+}
+
+/* Remember Me */
+
+.remember-me{
+    font-size:14px;
+}
+
+/* Divider */
+
+hr{
+    margin:20px 0;
+}

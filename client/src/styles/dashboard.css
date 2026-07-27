@@ -1,0 +1,122 @@
+/* /* ===========================
+   Dashboard
+=========================== */
+
+body{
+    background:#f0ebef !important;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* Welcome Card */
+
+.welcome-card{
+    background:#eaf2ff;
+    border:1px solid #b6d4fe;
+    border-radius:12px;
+}
+
+/* Dashboard Cards */
+
+.dashboard-card{
+    border-width:2px !important;
+    border-radius:12px !important;
+    cursor:pointer;
+}
+
+.dashboard-card:hover{
+    box-shadow:0 8px 20px rgba(0,0,0,.30) !important;
+}
+
+/* Card Title */
+
+.dashboard-card h5{
+    font-weight:bold;
+    color:#222;
+}
+
+/* Card Numbers */
+
+.dashboard-card h2{
+    font-weight:bold;
+    color:#0d6efd;
+}
+
+/* Tables */
+
+.table{
+    background:#fff;
+}
+
+.table thead{
+    background:#212529;
+    color:#fff;
+}
+
+.table tbody tr:hover{
+    background:#f8f9fa;
+}
+
+/* Buttons */
+
+.btn{
+    border-radius:8px !important;
+}
+
+.btn-primary:hover{
+    background:#0b5ed7 !important;
+}
+
+.btn-success:hover{
+    background:#157347 !important;
+}
+
+.btn-warning:hover{
+    background:#ffca2c !important;
+}
+
+.btn-danger:hover{
+    background:#bb2d3b !important;
+}
+
+.btn-info:hover{
+    background:#31d2f2 !important;
+}
+
+/* Cards */
+
+.card{
+    border-radius:12px !important;
+}
+
+/* Recent Activity Cards */
+
+.card-header{
+    font-weight:bold;
+}
+
+/* List Group */
+
+.list-group-item:hover{
+    background:#f8f9fa;
+}
+
+/* Badge */
+
+.badge{
+    font-size:13px;
+    padding:6px 10px;
+}
+.card.dashboard-card:hover{
+    transform: scale(1.05) !important;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25) !important;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .dashboard-card{
+        margin-bottom:15px;
+    }
+
+} 
