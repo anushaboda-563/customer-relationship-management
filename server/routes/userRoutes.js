@@ -1,4 +1,5 @@
 const express = require("express");
+
 const router = express.Router();
 
 const {
@@ -18,7 +19,19 @@ const roleMiddleware = require("../middleware/roleMiddleware");
 // ==========================
 // Public Route
 // ==========================
+
 router.post("/register", registerUser);
+
+// ==========================
+// Profile Routes
+// IMPORTANT: These must come BEFORE /:id
+// ==========================
+
+router.get("/profile", protect, getProfile);
+
+router.put("/profile", protect, updateProfile);
+
+router.put("/change-password", protect, changePassword);
 
 // ==========================
 // Protected Admin Routes
@@ -55,12 +68,5 @@ router.delete(
     roleMiddleware("Admin"),
     deleteUser
 );
-
-// Profile
-router.get("/profile", protect, getProfile);
-router.put("/profile", protect, updateProfile);
-
-// Change Password
-router.put("/change-password", protect, changePassword);
 
 module.exports = router;
